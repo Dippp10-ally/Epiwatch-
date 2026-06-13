@@ -3,3 +3,187 @@
 @tailwind components;
 @tailwind utilities;
 body { background-color: #0a0e1a; color: #e8edf5; font-family: 'DM Sans', sans-serif; }
+
+/* ================================
+   RESPONSIVE DESIGN SYSTEM
+================================ */
+
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  .container,
+  .main-container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .container,
+  .main-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  input,
+  textarea {
+    font-size: 16px; /* prevents iOS zoom */
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 640px) {
+  body {
+    font-size: 13.5px;
+  }
+
+  .container,
+  .main-container {
+    padding: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+
+  p {
+    line-height: 1.6;
+  }
+
+  button {
+    width: 100%;
+    padding: 0.85rem;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  .stack-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  body {
+    font-size: 13px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.05rem;
+  }
+
+  button {
+    font-size: 0.85rem;
+  }
+
+  .container,
+  .main-container {
+    padding: 0.5rem;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 360px) {
+  body {
+    font-size: 12.5px;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  button {
+    padding: 0.7rem;
+  }
+}
+
+/* ================================
+   RESPONSIVE UTILITIES
+================================ */
+
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (min-width: 768px) {
+  .responsive-container {
+    padding: 0 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    padding: 0 2rem;
+  }
+}
+
+/* Prevent horizontal overflow */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Better touch interaction */
+button, a, input {
+  touch-action: manipulation;
+}
+
+/* Smooth scaling */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
